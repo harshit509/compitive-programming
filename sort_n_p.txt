@@ -1,0 +1,31 @@
+put all negative before postitive i.e its a type of sort
+
+#include<iostream>
+using namespace std;
+int main(){
+	int arr[]={2,3,4,-3,-4,-8,-9};
+	int n=7;
+	int i,neg=0,pos=n-1;
+
+while(neg<pos){
+	
+	while( neg<=n-1&&arr[neg]<0){
+		neg++;
+	}
+	while(pos>=0&&arr[pos]>0){
+		pos--;
+	}
+	if(neg<pos){
+		int temp;
+		temp=arr[neg];
+		arr[neg]=arr[pos];
+		arr[pos]=temp;
+	}
+
+	}
+		for(i=0;i<n;i++){
+		cout<<arr[i]<<endl;
+	}
+	cout<<"\n";
+	return 0;
+}

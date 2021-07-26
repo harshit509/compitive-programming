@@ -1,0 +1,16 @@
+//lcm of a number
+#include<iostream>
+using namespace std;
+int main(){
+	int a=12;
+	int b=4;
+	int c=(a>b)?a:b;
+	while(1){	
+		if(c%a==0&&c%b==0){
+			 cout<<c;
+			 
+			 break;
+		}
+c++;		
+	}
+}

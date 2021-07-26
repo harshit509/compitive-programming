@@ -1,0 +1,23 @@
+maxsubarray
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+//	find the maxsubarray using k-adane algorithm
+int arr[5]={1,-3,4,-3,2};
+int n=5;
+//applying formula here
+
+int maxsofar=0;
+//int maxendhere=0;
+for(int i=0;i<n;i++){
+	 int maxendhere=0;
+	for(int j=i;j<n;j++){
+		maxendhere=maxendhere+arr[j];
+		if(maxsofar<maxendhere){
+			maxsofar=maxendhere;
+		}
+	}
+}
+cout<<maxsofar;
+
+}

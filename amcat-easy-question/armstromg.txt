@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+int main(){
+	int num=372;
+	int i,rem;
+	int sum=0;
+	int check_Arm=num;
+	
+while(num>0){
+	rem=num%10;
+	sum=sum+(rem*rem*rem);
+	num=num/10;
+}
+
+if(check_Arm==sum){
+	cout<<"yes it armstrong";
+}
+else{
+	cout<<"no its not armstrong";
+}
+
+}

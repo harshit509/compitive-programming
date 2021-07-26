@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+int main(){
+	int arr1[4]={1,2,3,4};
+	int arr2[4]={2,6,8,10};
+	int n=4;
+int count1=0;
+	
+	for(int i=0;i<n;i++){
+			int count=0;
+		for(int j=0;j<n;j++){
+			if(arr1[i]!=arr2[j]){
+				count++;
+			}
+		}
+		if(count==n){
+			cout<<arr1[i];
+	 count1++;
+		}
+
+	}
+	
+//	for j
+for(int j=0;j<n;j++){
+			int count=0;
+		for(int i=0;i<n;i++){
+			if(arr2[j]!=arr1[i]){
+				count++;
+			}
+		}
+		if(count==n){
+			cout<<arr2[j];
+			count1++;
+		}
+
+	}
+cout<<"total answer is"<<count1;
+}

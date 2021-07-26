@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+//	find the min-max element in an array
+
+int arr[5]={4,5,3,2,1};
+int n=5;
+
+//sort(arr,arr+n);
+//cout<<"min element is="<<arr[0]<<endl<<"max element is"<<arr[n-1];
+
+int max_elem=INT_MIN;
+int min_elem=INT_MAX;
+for(int i=0;i<n;i++){
+	min_elem=min(min_elem,arr[i]);
+	max_elem=max(max_elem,arr[i]);
+}
+ cout<<min_elem<<max_elem;
+}

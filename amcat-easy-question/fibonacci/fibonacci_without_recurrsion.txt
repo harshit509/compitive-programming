@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+int main(){
+	int num=5;
+	int fibonacci;
+	cout<<"0"<<",";
+	cout<<"1";
+int x=0;
+int y=1;
+	for(int i=0;i<5-2;i++){
+		int z=x+y;
+		cout<<",";
+		cout<<z;
+		
+	   x=y;
+		y=z;
+	
+	}
+}

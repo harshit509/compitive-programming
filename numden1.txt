@@ -1,0 +1,64 @@
+a1*a2 +a2*a3 +a3*a1/a1+a2+a3
+
+#include<iostream>
+using namespace std;
+int main(){
+	int n=4,den=0,num=0,total_product=1;
+	int arr[4]={1,2,3,4};
+	for(int i=0;i<n;i++){
+		 total_product=total_product * arr[i];
+	}
+	for(int i=0;i<n;i++){
+	num=num+(total_product/arr[i]);
+	den=den+arr[i];	
+	}
+	cout<<num/den;
+}
+
+
+
+   1!/1! + 1!*2!/1!+2! + 1!*2!*3!/1!+2!+3! +..........
+        
+ #include<iostream>
+using namespace std;
+int main(){
+	int fact=1;
+	int n=4,i;
+	int num=0,
+	int den=0;
+	int s=0;
+	for(i=1;i<=n;i++){
+		fact=fact*i;
+		num=num*fact;
+		den=den+fact;
+		s+=(num/den);
+	}
+	cout<<s;
+}
+
+1!/1! + 1+2/(1!+2!)*(1!+2!) + 1+2+3/(1!*2!*3!)*(1!*2!*3!) +..........
+
+#include<iostream>
+using namespace std;
+int main(){
+	int den=0;
+	int multiply_den=0;
+	int fact=1;
+	int n=2,i;
+	int num=0;
+	int s=0;
+	
+	
+	for(i=1;i<=n;i++){
+		fact=fact*i;
+		
+		num=num+i;
+		den=den+fact;
+		
+		multiply_den=den+fact;
+		
+		s+=(double)num/multiply_den*den;
+	}
+	cout<<s;
+}
+

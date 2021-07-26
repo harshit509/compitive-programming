@@ -1,0 +1,34 @@
+max difference present between two element such that largest element come after smallest element in an array
+
+arr[]=[-2,2,12,4,8,-1,-6,16]
+
+output=22  16-(-6)=22
+
+
+
+#include<iostream>
+using namespace std;
+int passarr(int arr[],int n);
+
+int main(){
+	int arr[8]={-2,2,12,4,8,-1,-6,16};
+	passarr(arr,8);
+}
+
+int passarr(int arr[],int n){
+	int i,j,differ,min_number=0;
+	for(i=0;i<n-1;i++){
+		for(j=i+1;j<n;j++){
+			if(arr[i]<arr[j])
+			 differ=arr[j]-arr[i];
+			 
+			if(min_number<differ)
+			{
+				min_number=differ;
+			}
+		}
+		
+		
+	}
+	cout<<min_number;
+}

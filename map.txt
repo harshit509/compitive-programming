@@ -1,0 +1,84 @@
+to find element in c++using map
+ 
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    // cout<<"Hello World";
+    map<int,int>m;
+    m[1]=45;
+    m[2]=50;
+    m[3]=90;
+    m.insert({4,70});
+    auto it=m.find(3);
+        cout<< (*it).first<<" "<<(*it).second<<endl;
+    
+
+    return 0;
+}
+
+to iterate element
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    // cout<<"Hello World";
+    map<int,int>m;
+    m[1]=45;
+    m[2]=50;
+    m[3]=90;
+    m.insert({4,70});
+    map<int,int>::iterator it;
+    
+    for(it=m.begin();it!=m.end();++it){
+        cout<< (*it).first<<" "<<(*it).second<<endl;
+    }
+
+
+another method to iterate
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    // cout<<"Hello World";
+    map<int,int>m;
+    m[1]=45;
+    m[2]=50;
+    m[3]=90;
+    m.insert({4,70});
+    // map<int,int>::iterator it;
+    
+    for(auto &pr:m){
+        cout<< (pr).first<<" "<<(pr).second<<endl;
+    }
+
+
+
+to erase any element
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    // cout<<"Hello World";
+    map<int,int>m;
+    m[1]=45;
+    m[2]=50;
+    m[3]=90;
+    m.insert({4,70});
+    // map<int,int>::iterator it;
+    auto pr=m.erase(2);
+    for(auto &pr:m){
+        cout<< (pr).first<<" "<<(pr).second<<endl;
+    }
+
+    return 0;
+}

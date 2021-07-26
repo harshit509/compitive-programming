@@ -1,0 +1,18 @@
+//prime or not
+#include<iostream>
+using namespace std;
+int main(){
+	int prime_check=7;
+	int count=0;
+	for(int i=1;i<=prime_check;i++){
+		if(prime_check%i==0){
+			 count++;
+		}
+	}
+	if(count==2){
+		cout<<"yes it is prime number ";
+	}
+	else{
+		cout<<"no it is not prime number";
+	}
+}

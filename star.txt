@@ -1,0 +1,171 @@
+
+1.*******
+
+#include<iostream>
+using namespace std;
+int main(){
+	int n;
+	cin>>n;
+	for(int i=0;i<n;i++){
+		cout<<"*"<<" ";
+	}
+}
+
+2.
+
+*
+**
+***
+****
+#include<iostream>
+using namespace std;
+int main(){
+	
+	for(int i=1;i<=4;i++){
+		for(int j=1;j<=4;j++){
+			if(j<=i){
+				cout<<"*";
+			}
+			
+		}
+		cout<<endl;
+	}
+}
+
+
+
+3.       *
+        **
+       ***
+      ****
+
+#include<iostream>
+using namespace std;
+int main(){
+	int i,j;
+	for(i=1;i<=4;i++){
+		for(j=1;j<=4;j++){
+			if(j>=(5-i))
+				cout<<"*";
+			else{
+					cout<<" ";
+			}
+		
+			
+			
+		}
+		cout<<endl;
+	}
+}
+
+4.
+     *
+    ***
+   *****
+  *******
+ *********
+#include<iostream>
+using namespace std;
+int main(){
+	int i,j;
+	for(i=1;i<=5;i++){
+		for(j=1;j<=9;j++){
+			if(j>=(6-i)&& j<=(4+i)){
+				cout<<"*";
+			}
+			else{
+				cout<<" ";
+			}
+		}
+		cout<<"\n";
+	}
+}
+
+  for 3=***
+         *
+        ***   
+
+for 6=  ******
+         ****
+          **
+          **
+         ****
+        ******
+ #include<iostream>
+using namespace std;
+
+
+int main(){
+	int n;
+	cin>>n;
+	int space,star;	
+
+
+	for(int row=1;row<=n/2;row++){	
+			//for spaces
+int total_space=(row-1)*2;
+//for stars
+int total_stars=n-total_space;   
+//		in first thing i need first space before stars
+//then stars and the samespace before stars.
+ 
+// for spaces first
+for(space=1;space<=total_space/2;space++){
+	cout<<" ";
+}
+//for stars
+for(star=1;star<=total_stars;star++){
+	cout<<"*";
+}
+//then space again
+for(space=1;space<=total_space/2;space++){
+	cout<<" ";
+}
+//then next line
+cout<<"\n";
+ 
+ 
+	}
+	
+	if(n%2==1){
+ 	int total_space=n-1;
+ 	for(space=1;space<=total_space/2;space++){
+	cout<<" ";
+}
+cout<<"*";
+for(space=1;space<=total_space/2;space++){
+	cout<<" ";
+}	
+ }
+
+
+		for(int row=n/2;row>=1;row--){	
+			//for spaces
+int total_space=(row-1)*2;
+//for stars
+int total_stars=n-total_space;   
+//		in first thing i need first space before stars
+//then stars and the samespace before stars.
+ 
+// for spaces first
+for(space=1;space<=total_space/2;space++){
+	cout<<" ";
+}
+//for stars
+for(star=1;star<=total_stars;star++){
+	cout<<"*";
+}
+//then space again
+for(space=1;space<=total_space/2;space++){
+	cout<<" ";
+}
+//then next line
+cout<<"\n";
+ 
+ 
+	}
+	
+	return 0;
+}
+      
+

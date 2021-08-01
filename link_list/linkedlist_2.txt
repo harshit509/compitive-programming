@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+struct node{
+	int data;
+	node *next;
+};
+int main(){
+//	int *a=new int like dynammic programming
+//*a=10;
+//cout<<*a;
+
+node *head =new node;
+(*head).data=15;   /*  head->data=15 we can write as well*/
+(*head).next=new node;
+head->next->data=30;
+head->next->next=0;
+cout<<(*head).data<<" "<<head->next->data;
+return 0;
+	
+}
+so output is 15 and 30

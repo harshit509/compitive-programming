@@ -1,0 +1,67 @@
+#include<iostream>
+using namespace std;
+
+struct node{
+	int data;
+	node* next;
+};
+node* stack=0;
+void push(int x){
+node*ptr=new node;
+ptr->data=x;
+ptr->next=stack;
+stack=ptr;
+}
+void pop(){
+	if(stack==0){
+		cout<<"stack underflow"<<endl;
+	}
+	else{
+		int deleted_data=stack->data;
+		node*temp=stack;
+		stack=stack->next;
+		delete(temp);
+		cout<<"The deleted data is="<<deleted_data;
+	}
+}
+void show(){
+	if(stack==0){
+		cout<<"stack is underflow";
+	}
+	else{
+		cout<<stack->data;
+	}
+	
+}
+
+int main(){
+	int number,value;
+	do{
+			cout<<endl<<"enter the number from 1 to 4"<<endl;
+	cin>>number;
+	cout<<"\n";
+	switch(number){
+		case 1: 
+		{
+			cout<<endl<<"enter the value to be pushed=";
+			cin>>value;
+			push(value);
+			break;
+		}
+		case 2:{
+			pop();
+			break;
+		}
+		case 3:{
+			show();
+			break;
+		}
+		default:{
+			cout<<endl<<"nothing to do"<<endl;
+			break;
+		}
+	}
+	}
+	while(number<=3);
+return 0;
+}

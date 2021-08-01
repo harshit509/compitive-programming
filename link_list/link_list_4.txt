@@ -1,0 +1,135 @@
+#include<iostream>
+using namespace std;
+struct node{
+	int data;
+	node* next;
+	
+};
+void printll(node* head){
+	node* temp=head;
+	while(temp!=0){
+	cout<<temp->data;
+	temp=temp->next;
+	cout<<"\n";
+	}
+}
+//void add_front(node* &head,int item){
+//	node*ptr=new node;
+//	ptr->data=item;
+//	ptr->next=0;
+//	if(head==0){
+//	head=ptr;
+//	}
+//	else{
+//		ptr->next=head;
+//		head=ptr;
+//	}
+//}
+//
+node* insert_At_last(node* &head,int item){
+	node* ptr=new node;
+	ptr->data=item;
+	ptr->next=0;
+	if(head==0){
+		head=ptr;
+		cout<<"\n";
+	}
+	else if(head->next==0){
+		head->next=ptr;
+		cout<<"\n";
+	}
+	else{
+		node*temp=head;
+		while(temp->next!=0){
+			temp=temp->next;
+		}
+			temp->next=ptr;
+			cout<<"\n";
+	}
+
+}
+// delete at last
+int deletenodeatend(node* &head){
+	if(head==0){
+		cout<<"nothing to delete"<<endl;
+	}
+	else if(head->next==0){
+		int delete_number=head->data;
+		delete(head);
+		head->next=0;
+		return delete_number;
+	}
+	else{
+		node*temp=head;
+		while(temp->next->next!=0){
+			temp=temp->next;
+		}
+		int delete_number=temp->next->data;
+		delete(temp->next);
+		temp->next=0;
+		
+		return (delete_number);
+	}
+}
+int deletenodeatfront(node* &head){
+	if(head==0){
+		cout<<"nothing to delete"<<endl;
+	}
+	else if(head->next==0){
+		int delete_number=head->data;
+		delete(head);
+		head->next=0;
+		return delete_number;
+	}
+	else{
+		int delete_number=head->data;
+		node*temp=head;
+		head=head->next;
+		delete(temp);
+		return delete_number;
+	}
+}
+void reverse(node* head){
+	if(head==0){
+		return;
+	}
+	else{
+		reverse(head->next);
+		cout<<head->data;
+	}
+}
+void insertatmiddle(node* &head,int pos,int item){
+	node*ptr=head;
+	ptr->data=item;
+	ptr->next=0;
+	
+node* temp=head;
+for(int i=0;i<(pos-1);i++){
+	temp=temp->next;
+}
+ptr->next=temp->next;
+temp->next=ptr;
+}
+
+int main(){
+	node* head=0;
+	int n=5;
+	for(int i=0;i<n;i++){
+		int item;
+		cin>>item;
+		    insert_At_last(head,item);
+//add_front(head,item);
+
+			cout<<"\n";
+		
+	}
+//	for(int i=0;i<n;i++){
+//		cout<<"hii iam delted:"<<deletenodeatend(head)<<"\n";
+//cout<<"hii iam delted:"<<deletenodeatfront(head)<<"\n";
+//	}
+
+reverse(head);
+cout<<"\n";
+insertatmiddle(head,2,100);
+printll(head);
+}

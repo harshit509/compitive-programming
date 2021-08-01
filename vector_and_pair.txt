@@ -113,3 +113,55 @@ int k=5;
 	int position=v.at(k-1);
 	cout<<position;
 }
+
+7.swapping
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	vector <int>v1,v2;
+	v1.push_back(1);
+	v2.push_back(2);
+	v1.swap(v2);
+	for(int i=0;i<v1.size();i++){
+		cout<<v1[i];
+	}
+}
+
+
+8.inserting at the begin
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	vector <int>v1;
+	v1.push_back(1);
+	v1.insert(v1.begin(),5);
+	for(int i=0;i<v1.size();i++){
+		cout<<v1[i];
+	}
+}
+
+at end->
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	vector <int>v1;
+	v1.push_back(1);
+	v1.insert(v1.end(),5);
+	for(int i=0;i<v1.size();i++){
+		cout<<v1[i];
+	}
+}
+
+8.reverse an array
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	vector <int>v1;
+	v1.push_back(1);
+v1.push_back(2);
+v1.push_back(3);
+reverse(v1.begin(),v1.end());
+	for(int i=0;i<v1.size();i++){
+		cout<<v1[i];
+	}
+}
